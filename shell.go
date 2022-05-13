@@ -21,7 +21,7 @@
 package main
 
 import (
-	"gopkg.in/abiosoft/ishell.v2"
+	"github.com/abiosoft/ishell/v2"
 )
 
 func repl() {

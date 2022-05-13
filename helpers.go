@@ -26,10 +26,10 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/abiosoft/ishell/v2"
 	"github.com/mitchellh/go-homedir"
 	"github.com/sirupsen/logrus"
 	"github.com/topfreegames/pitaya/client"
-	"gopkg.in/abiosoft/ishell.v2"
 )
 
 func protoClient(log Log, addr string) error {
