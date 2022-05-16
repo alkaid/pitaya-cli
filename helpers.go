@@ -26,15 +26,16 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/topfreegames/pitaya-cli/log"
+
 	"github.com/abiosoft/ishell/v2"
 	"github.com/mitchellh/go-homedir"
-	"github.com/sirupsen/logrus"
-	"github.com/topfreegames/pitaya/client"
+	"github.com/topfreegames/pitaya/v2/client"
 )
 
-func protoClient(log Log, addr string) error {
-	log.Println("Using protobuf client")
-	protoclient := client.NewProto(docsString, logrus.InfoLevel)
+func protoClient(preLog Log, addr string) error {
+	preLog.Println("Using protobuf client")
+	protoclient := client.NewProto(docsString, log.Log)
 	pClient = protoclient
 
 	for k, v := range pushInfo {
@@ -42,7 +43,7 @@ func protoClient(log Log, addr string) error {
 	}
 
 	if err := protoclient.LoadServerInfo(addr); err != nil {
-		log.Println("Failed to load server info")
+		preLog.Println("Failed to load server info")
 		return err
 	}
 

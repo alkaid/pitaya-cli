@@ -25,8 +25,9 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/sirupsen/logrus"
-	"github.com/topfreegames/pitaya/client"
+	"github.com/topfreegames/pitaya-cli/log"
+
+	"github.com/topfreegames/pitaya/v2/client"
 )
 
 func connect(logger Log, addr string, onMessageCallback func([]byte)) (err error) {
@@ -39,7 +40,7 @@ func connect(logger Log, addr string, onMessageCallback func([]byte)) (err error
 		err = protoClient(logger, addr)
 	default:
 		logger.Println("Using json client")
-		pClient = client.New(logrus.InfoLevel)
+		pClient = client.New(log.Log)
 	}
 	pClient.SetClientHandshakeData(handshake)
 
@@ -60,9 +61,8 @@ func connect(logger Log, addr string, onMessageCallback func([]byte)) (err error
 }
 
 func setHandshake(logger Log, args []string) error {
-
 	// Try first unserializing arguments as a json.
-	err := json.Unmarshal([]byte(strings.Join(args[:], "")), &handshake)
+	err := json.Unmarshal([]byte(strings.Join(args, "")), &handshake)
 	if err == nil {
 		return nil
 	}
