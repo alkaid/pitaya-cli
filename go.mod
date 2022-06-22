@@ -40,6 +40,6 @@ require (
 
 replace github.com/panjf2000/ants/v2 v2.4.8 => github.com/alkaid/ants/v2 v2.4.802
 
-replace github.com/topfreegames/pitaya/v2 v2.0.4 => github.com/alkaid/pitaya/v2 v2.0.423
+replace github.com/topfreegames/pitaya/v2 v2.0.4 => github.com/alkaid/pitaya/v2 v2.0.428
 
-//replace github.com/topfreegames/pitaya/v2 v2.0.4 => ../../../pitaya
+//replace github.com/topfreegames/pitaya/v2 => ../pitaya

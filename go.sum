@@ -10,8 +10,8 @@ github.com/abiosoft/readline v0.0.0-20180607040430-155bce2042db/go.mod h1:rB3B4r
 github.com/alkaid/ants/v2 v2.4.802 h1:J/HdWveoek++H+J4jInl4d79mSrQ3ssaqAcnrondmwY=
 github.com/alkaid/goerrors v1.0.7 h1:+kg2c+TodISx3BZ6BlOhdjPDbkMCJdcO8ufvnZVtGe4=
 github.com/alkaid/goerrors v1.0.7/go.mod h1:Txb6skJrnrFdHPRpHrDeknZa9qWnuJN+0Urq+wvPovI=
-github.com/alkaid/pitaya/v2 v2.0.423 h1:Qx/lXKEsQH/6l0SHvKXjoR1UaodhZkYE2ccI9n1Hp8s=
-github.com/alkaid/pitaya/v2 v2.0.423/go.mod h1:cG9KqhupNHI5WrQW6EgmjYAxhDcqLbV569nkqTQNh4Q=
+github.com/alkaid/pitaya/v2 v2.0.428 h1:bKpSPvFXycEsIk+67O4ZaiF9LqIHUOW971i9ooDan4k=
+github.com/alkaid/pitaya/v2 v2.0.428/go.mod h1:cG9KqhupNHI5WrQW6EgmjYAxhDcqLbV569nkqTQNh4Q=
 github.com/antihax/optional v1.0.0/go.mod h1:uupD/76wgC+ih3iEmQUL+0Ugr19nfwCT1kdvxnR2qWY=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
 github.com/benbjohnson/clock v1.1.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=

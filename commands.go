@@ -25,8 +25,6 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/topfreegames/pitaya-cli/log"
-
 	"github.com/topfreegames/pitaya/v2/client"
 )
 
@@ -40,7 +38,7 @@ func connect(logger Log, addr string, onMessageCallback func([]byte)) (err error
 		err = protoClient(logger, addr)
 	default:
 		logger.Println("Using json client")
-		pClient = client.New(log.Log)
+		pClient = client.New()
 	}
 	pClient.SetClientHandshakeData(handshake)
 
@@ -164,6 +162,6 @@ func notify(logger Log, args []string) error {
 func disconnect() {
 	if pClient.ConnectedStatus() {
 		disconnectedCh <- true
-		pClient.Disconnect()
+		pClient.Disconnect(client.CloseReasonManual)
 	}
 }
